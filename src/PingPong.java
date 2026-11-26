@@ -1,3 +1,4 @@
+// Simple 2-process MPI Ping-Pong program in Java (MPJ Express)
 import mpi.*;
 
 public class PingPong {
