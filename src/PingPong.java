@@ -5,6 +5,7 @@ public class PingPong {
         MPI.Init(args);
 
         int rank = MPI.COMM_WORLD.Rank();
+        int size = MPI.COMM_WORLD.Size();
 
         MPI.Finalize();
     }
