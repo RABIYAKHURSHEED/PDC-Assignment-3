@@ -25,6 +25,7 @@ public class PingPong {
             }
         } else if (rank == 1) {
             while (counter[0] < 10) {
+                MPI.COMM_WORLD.Recv(counter, 0, 1, MPI.INT, 0, 0);
             }
         }
 
