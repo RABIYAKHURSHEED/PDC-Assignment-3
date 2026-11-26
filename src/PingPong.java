@@ -15,6 +15,8 @@ public class PingPong {
             return;
         }
 
+        int[] counter = {0};
+
         MPI.Finalize();
     }
 }
