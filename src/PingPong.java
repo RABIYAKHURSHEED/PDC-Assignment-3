@@ -17,6 +17,9 @@ public class PingPong {
 
         int[] counter = {0};
 
+        if (rank == 0) {
+        }
+
         MPI.Finalize();
     }
 }
