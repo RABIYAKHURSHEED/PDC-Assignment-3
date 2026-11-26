@@ -27,6 +27,7 @@ public class PingPong {
             while (counter[0] < 10) {
                 MPI.COMM_WORLD.Recv(counter, 0, 1, MPI.INT, 0, 0);
                 counter[0]++;
+                MPI.COMM_WORLD.Send(counter, 0, 1, MPI.INT, 0, 1);
             }
         }
 
