@@ -24,6 +24,8 @@ public class PingPong {
                 System.out.println("Rank 0 received: " + counter[0]);
             }
         } else if (rank == 1) {
+            while (counter[0] < 10) {
+            }
         }
 
         MPI.Finalize();
