@@ -23,6 +23,7 @@ public class PingPong {
                 MPI.COMM_WORLD.Recv(counter, 0, 1, MPI.INT, 1, 1);
                 System.out.println("Rank 0 received: " + counter[0]);
             }
+            System.out.println("Ping-pong finished!");
         } else if (rank == 1) {
             while (counter[0] < 10) {
                 MPI.COMM_WORLD.Recv(counter, 0, 1, MPI.INT, 0, 0);
