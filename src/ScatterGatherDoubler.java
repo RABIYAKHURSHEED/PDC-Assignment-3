@@ -17,6 +17,11 @@ public class ScatterGatherDoubler {
 		int[] sendBuffer = new int[rank == ROOT ? totalElements : 0];
 		int[] recvChunk = new int[UNIT_SIZE];
 		int[] gatheredBuffer = new int[rank == ROOT ? totalElements : 0];
+		if (rank == ROOT) {
+            for (int i = 0; i < totalElements; i++) {
+                sendBuffer[i] = i + 1; // [1, 2, ..., 16]
+            }
+        }
     }
 
 }
