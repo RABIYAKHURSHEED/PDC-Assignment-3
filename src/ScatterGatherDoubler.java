@@ -11,6 +11,7 @@ public class ScatterGatherDoubler {
             System.err.println("This program requires exactly 4 processes (got " + size + ").");
 			}
 			MPI.Finalize();
+			return;
         }
     }
 
