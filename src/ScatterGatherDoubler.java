@@ -21,6 +21,7 @@ public class ScatterGatherDoubler {
             for (int i = 0; i < totalElements; i++) {
                 sendBuffer[i] = i + 1; // [1, 2, ..., 16]
             }
+            System.out.println("Process " + rank + " (Root) initial array: " + Arrays.toString(sendBuffer));
         }
 		MPI.COMM_WORLD.Scatter(
 	            sendBuffer, 0, UNIT_SIZE, MPI.INT,
