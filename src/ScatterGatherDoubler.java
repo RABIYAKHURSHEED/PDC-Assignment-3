@@ -5,7 +5,7 @@ public class ScatterGatherDoubler {
 	public static void main(String[] args) throws MPIException {
 		MPI.Init(args);
 		int rank = MPI.COMM_WORLD.Rank();
-		
+		int size = MPI.COMM_WORLD.Size();
     }
 
 }
