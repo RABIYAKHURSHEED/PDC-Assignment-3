@@ -33,6 +33,11 @@ public class ScatterGatherDoubler {
             recvChunk[i] = recvChunk[i] * 2;
         }
 		System.out.println("Process " + rank + " doubled chunk:  " + Arrays.toString(recvChunk));
+		MPI.COMM_WORLD.Gather(
+	            recvChunk,      0, UNIT_SIZE, MPI.INT,
+	            gatheredBuffer, 0, UNIT_SIZE, MPI.INT,
+	            ROOT
+	        );
     }
 
 }
