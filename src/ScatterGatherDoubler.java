@@ -28,6 +28,7 @@ public class ScatterGatherDoubler {
 	            recvChunk,  0, UNIT_SIZE, MPI.INT,
 	            ROOT
 	        );
+		System.out.println("Process " + rank + " received chunk: " + Arrays.toString(recvChunk));
 		for (int i = 0; i < UNIT_SIZE; i++) {
             recvChunk[i] = recvChunk[i] * 2;
         }
