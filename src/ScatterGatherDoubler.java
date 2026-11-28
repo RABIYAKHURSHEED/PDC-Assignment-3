@@ -13,6 +13,7 @@ public class ScatterGatherDoubler {
 			MPI.Finalize();
 			return;
         }
+		int totalElements = UNIT_SIZE * size; // 4 * 4 = 16 integers
     }
 
 }
