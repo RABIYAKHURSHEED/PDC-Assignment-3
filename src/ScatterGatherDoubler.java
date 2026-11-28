@@ -30,6 +30,7 @@ public class ScatterGatherDoubler {
 		for (int i = 0; i < UNIT_SIZE; i++) {
             recvChunk[i] = recvChunk[i] * 2;
         }
+		System.out.println("Process " + rank + " doubled chunk:  " + Arrays.toString(recvChunk));
     }
 
 }
