@@ -22,6 +22,11 @@ public class ScatterGatherDoubler {
                 sendBuffer[i] = i + 1; // [1, 2, ..., 16]
             }
         }
+		MPI.COMM_WORLD.Scatter(
+	            sendBuffer, 0, UNIT_SIZE, MPI.INT,
+	            recvChunk,  0, UNIT_SIZE, MPI.INT,
+	            ROOT
+	        );
     }
 
 }
