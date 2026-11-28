@@ -45,7 +45,10 @@ public class ScatterGatherDoubler {
                 if (i < gatheredBuffer.length - 1) {
                     System.out.print(", ");
                 }
-            }
+            }System.out.println("]");
+        }
+
+        MPI.Finalize();
     }
 
 }
