@@ -1,4 +1,5 @@
 import mpi.*;
+import java.util.Arrays;
 public class ScatterGatherDoubler {
 	private static final int UNIT_SIZE = 4;
 	private static final int ROOT = 0;
