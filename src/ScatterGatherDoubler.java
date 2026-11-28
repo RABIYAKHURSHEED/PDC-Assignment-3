@@ -7,9 +7,10 @@ public class ScatterGatherDoubler {
 		int rank = MPI.COMM_WORLD.Rank();
 		int size = MPI.COMM_WORLD.Size();
 		if (size != 4) {
-        }
-		if (rank == ROOT) {
+			if (rank == ROOT) {
             System.err.println("This program requires exactly 4 processes (got " + size + ").");
+			}
+			MPI.Finalize();
         }
     }
 
