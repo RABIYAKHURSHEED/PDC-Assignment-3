@@ -27,6 +27,9 @@ public class ScatterGatherDoubler {
 	            recvChunk,  0, UNIT_SIZE, MPI.INT,
 	            ROOT
 	        );
+		for (int i = 0; i < UNIT_SIZE; i++) {
+            recvChunk[i] = recvChunk[i] * 2;
+        }
     }
 
 }
