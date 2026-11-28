@@ -40,6 +40,12 @@ public class ScatterGatherDoubler {
 	        );
 		if (rank == ROOT) {
             System.out.print("Aggregated doubled array (" + totalElements + " elements): [");
+            for (int i = 0; i < gatheredBuffer.length; i++) {
+                System.out.print(gatheredBuffer[i]);
+                if (i < gatheredBuffer.length - 1) {
+                    System.out.print(", ");
+                }
+            }
     }
 
 }
