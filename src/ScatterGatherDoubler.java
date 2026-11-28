@@ -38,6 +38,8 @@ public class ScatterGatherDoubler {
 	            gatheredBuffer, 0, UNIT_SIZE, MPI.INT,
 	            ROOT
 	        );
+		if (rank == ROOT) {
+            System.out.print("Aggregated doubled array (" + totalElements + " elements): [");
     }
 
 }
